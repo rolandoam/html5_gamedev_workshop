@@ -1,0 +1,36 @@
+<html><head>
+<title>Learning WebGL &#8212; lesson 6</title>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<script type="text/javascript" src="sound.js"></script>
+
+<script type="text/javascript">
+	SSound.load("bg1", "Aces High", {
+		loop: true
+	});
+	SSound.load("up", "coin-up.wav");
+
+	var start_stop_bg = function () {
+		if (SSound.isPlaying("bg1")) {
+			SSound.stop("bg1");
+		} else {
+			SSound.play("bg1");
+		}
+	};
+
+	var play_sfx = function () {
+		SSound.play("up");
+	};
+
+</script>
+
+
+</head>
+
+
+<body>
+
+	<input type="button" value="start bg" onclick="start_stop_bg();"/><br/>
+	<input type="button" value="play sfx" onclick="play_sfx();"/>
+
+</body></html>
